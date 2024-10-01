@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculator</title>
+</head>
+<br><br>
+<body>
+   <center>
+    <h3><center><b><h2><u>Calculator</u></h2></b></center></h3>
+
+    <table style="border-collapse: collapse;">
+        <tr style="border-collapse: collapse;">
+            <td>Enter Number 1</td>
+            <td style="border: 1px solid black; margin-right: 10px;  ">
+                <input type="number" id="n1"/>
+            </td>
+        </tr>
+        <tr>
+            <td>Enter Number 2</td>
+            <td style="border: 1px solid black;margin-right: 10px;  ">
+                <input type="number" id="n2"/>
+            </td>
+        </tr>
+        <tr>
+            <td>Result</td>
+            <td style="border: 1px solid black; margin-right: 10px; ">
+               <div id="res"></div>
+            </td>
+        </tr>
+    </table>
+    <br>
+    <br>
+
+    <div style="display: flex;align-items: center; justify-content: center; width: 100%;">
+        <div><input type="button" value="Addition" onclick="addNumbers()"/></div>
+        <div style="margin-left: 05px;"><input type="button" value="Substraction" onclick="subNumbers()"/></div>
+        <div style="margin-left: 05px;"><input type="button" value="Multiplication" onclick="mulNumbers()"/></div>
+        <div style="margin-left: 05px;"><input type="button" value="Division" onclick="divNumbers()"/></div>
+    </div>
+   </center>
+
+   <script>
+    
+    function addNumbers()
+    {debugger;
+        const num1=parseInt(document.getElementById("n1").value);
+        const num2=parseInt(document.getElementById("n2").value);
+        const sum= num1+num2;
+
+        document.getElementById("res").innerText=sum;
+        
+    }
+    function subNumbers()
+    {debugger;
+        const num1=parseInt(document.getElementById("n1").value);
+        const num2=parseInt(document.getElementById("n2").value);
+        const sum= num1-num2;
+
+        document.getElementById("res").innerText=sum;
+        
+    }
+    function mulNumbers()
+    {debugger;
+        const num1=parseInt(document.getElementById("n1").value);
+        const num2=parseInt(document.getElementById("n2").value);
+        const sum= num1*num2;
+
+        document.getElementById("res").innerText=sum;
+        
+    }
+    function divNumbers()
+    {debugger;
+        const num1=parseInt(document.getElementById("n1").value);
+        const num2=parseInt(document.getElementById("n2").value);
+        const sum= num1/num2;
+
+        document.getElementById("res").innerText=sum;
+        
+    }
+   </script>
+</body>
+</html>
