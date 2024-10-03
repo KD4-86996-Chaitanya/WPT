@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+</head>
+<body>
+    <div style="position: absolute;margin-top: -100px;">
+    <img src="flat-style-airplane-icon-vector-illustration_1287271-93913.jpg" alt="" style="height: 150px;top:0px;" id="car">
+    </div>
+    <div style="width: 600px;position: relative;margin-top: 150px;">
+    <hr>
+    <br>
+    <input type="button" onclick="execute()" value="start">
+    <input type="button" onclick="stop()" value="stop">
+    <input type="button" onclick="down()" value="down">
+</div>
+<br>
+<br>
+<table>
+    <tr>
+        <td>X:</td>
+        <td style="border: 1px; border-color: black;"><input type="number" id="mmm"></td>
+    </tr>
+    <tr></tr>
+        <td>Y:</td>
+        <td style="border: 1px; border-color: black;"><input type="number" id="nnn"></td>
+    </tr>
+</table>
+
+
+    <script>
+        
+        var a = 0;
+        var z = 0;
+        var c = 0;
+        var tp=0;
+
+        function execute(){
+            z = window.setInterval(start, 10);
+        }
+
+        function start(){
+            
+            if(a<600)
+            {
+            a = a + 5;
+            var b = document.getElementById("car");
+            b.style.marginLeft = a  + "px";
+            var refTomyXAxis = document.getElementById("mmm");
+            refTomyXAxis.value = a;
+            }
+            else{
+                stop();
+                d = window.setInterval(down,10);
+               
+                
+            }
+            }
+        
+
+         function stop(){
+         var b = document.getElementById("car");
+        clearInterval(z);
+         }
+
+         function down(){
+                c = c + 5;
+                tp=tp+1;
+                var b = document.getElementById("car");
+                
+                b.style.rotate= c + "deg";
+                b.style.marginTop=tp+"px";
+                var refTomyYAxis = document.getElementById("nnn");
+                refTomyYAxis.value = tp;
+                if(c>3000){
+                    clearInterval(d);
+                    b.style.rotate = 180 + "deg";
+                }
+         }
+    </script>
+</body>
+</html>
